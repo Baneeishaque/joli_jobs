@@ -6,7 +6,7 @@ body{
 }
 ::-webkit-scrollbar-track
 {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
 	background-color: #FFFFFF;
 }
@@ -18,7 +18,7 @@ body{
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #51B4FF;
 }
 
@@ -136,19 +136,18 @@ body{
     transition: 1s;
 }
 .signup-container-main{
-    height: 600px;
+    /* height: 600px; */
     width: 100%;
 }
 .signup-container{
-    height:380px;
+    /* height:380px; */
     width: 400px;
-    margin: 65px 90px auto auto;
+    margin: 65px 90px 120px auto;
     border-radius: 2px;
     box-shadow: 0px 3px 50px 3px #DEDEDE;
 }
 .signup-table{
-    border-radius: 2px;
-    height: 380px;
+    /* height: 380px; */
     width: 400px;
     background-color: #FFFFFF;
     border: 0px;
@@ -235,25 +234,25 @@ body{
 }
 .signup-user-container:hover .signup-name{
     /* border-color: #6CBEFB; */
-    box-shadow: 0px 0px 2px 0px #0D97FF;
+    box-shadow: 0px 0px 5px 0px #0D97FF;
     transition: 1s;
 }
 .signup-user-container:hover .signup-user-icon{
     /* border-color: #6CBEFB; */
-    box-shadow: 0px 0px 2px 0px #0D97FF;
+    box-shadow: 0px 0px 5px 0px #0D97FF;
     transition: 1s;
 }
 .signup-name:focus{
     /* border-color: #6CBEFB; */
-    border-color: #A50DFF;
-    box-shadow: 0px 0px 2px 0px #A50DFF;
+    border-color: #0D97FF;
+    box-shadow: 0px 0px 5px 0px #0D97FF;
     transition: 1s;
 }
 .signup-name:focus + .signup-user-icon{
     /* border-color: #6CBEFB; */
-    background-color: #A50DFF;
-    border-color: #A50DFF;
-    box-shadow: 0px 0px 2px 0px #A50DFF;
+    background-color: #0D97FF;
+    border-color: #0D97FF;
+    box-shadow: 0px 0px 5px 0px #0D97FF;
     transition: 1s;
 }
 .signup-btn-row{
@@ -285,18 +284,111 @@ body{
 }
 .signup-user-container:hover .signup-pass-icon{
     /* border-color: #6CBEFB; */
-    box-shadow: 0px 0px 2px 0px #0D97FF;
+    box-shadow: 0px 0px 5px 0px #0D97FF;
     transition: 1s;
 }
 .signup-name:focus + .signup-pass-icon{
     /* border-color: #6CBEFB; */
-    background-color: #A50DFF;
-    border-color: #A50DFF;
-    box-shadow: 0px 0px 2px 0px #A50DFF;
+    background-color: #0D97FF;
+    border-color: #0D97FF;
+    box-shadow: 0px 0px 5px 0px #0D97FF;
     transition: 1s;
 }
 .signup-btn:hover{
     transition: 1s;
-    background-color: #A50DFF;
+    background-color: #0D97FF;
     box-shadow: 1px 0px 5px 2px #BBBBBB;
+}
+.add-user-container-main{
+    width: 100%;
+    height: 700px;
+    background-color: #0D97FF;
+    box-shadow: 0px 2px 9px 1px #CCCCCC;
+    margin: 0px auto 50px auto;
+    position: relative;
+}
+.add-user-container{
+    width: 700px;
+    height: 450px;
+    margin: 100px auto auto 75px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 50px 3px #0072C7;
+    border-radius: 2px;
+    border: 0px;
+    outline: none;
+}
+.add-user-table{
+    width: 700px;
+    border: 0px;
+    border-collapse: collapse;
+    color: #444444;
+}
+.add-user-table-header-row{
+    height: 80px;
+    border: 0px;
+    text-align: center;
+    vertical-align: center;
+}
+.add-user-table-header-column{
+    height: 80px;
+    border: 0px;
+    text-align: center;
+    vertical-align: bottom;
+    cursor: default;
+}
+.add-user-table-header-column h2{
+    color: #666666;
+    font-family: 'Nunito';
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.add-user-small-td{
+    width: 350px;
+    height: 80px;
+    text-align: center;
+    vertical-align: bottom;
+}
+.add-user-small-input1{
+    width: 300px;
+    height: 40px;
+    outline: none;
+    color: #777777;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 10px;
+    transition: 1s;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    margin: auto -20px auto auto;
+}
+.add-user-small-input1::placeholder{
+    color: #999999;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    transition: 1s;
+}
+.add-user-small-input2{
+    width: 300px;
+    height: 40px;
+    outline: none;
+    color: #777777;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 10px;
+    transition: 1s;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    margin: auto auto auto -20px;
+}
+.add-user-small-input2::placeholder{
+    color: #999999;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    transition: 1s;
+}
+.add-user-td{
+    width: 350px;
+    height: 60px;
+    text-align: center;
+    vertical-align: bottom;  
 }
