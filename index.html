@@ -8,6 +8,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,800" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <div class="top-nav-bar">
@@ -24,11 +26,11 @@
         <div class="steps-container">
             <div class="step-shifter-container">
                 <div class="absolute-center">
-                    <div class="slider-counter-container counter-inactive">1</div>
-                    <div class="slider-counter-container counter-inactive">2</div>
-                    <div class="slider-counter-container counter-inactive">3</div>
-                    <div class="slider-counter-container counter-inactive">4</div>
-                    <div class="slider-counter-container counter-active">5</div>
+                    <div id="slider-counter-1" class="slider-counter-container counter-active">1</div>
+                    <div id="slider-counter-2" class="slider-counter-container counter-inactive">2</div>
+                    <div id="slider-counter-3" class="slider-counter-container counter-inactive">3</div>
+                    <div id="slider-counter-4" class="slider-counter-container counter-inactive">4</div>
+                    <div id="slider-counter-5" class="slider-counter-container counter-inactive">5</div>
                 </div>
             </div>
         </div>
@@ -91,11 +93,31 @@
                         <td class="add-user-td">
                             <input class="add-user-small-input1" type="text" placeholder="email"/>
                         </td>
-                        <td class="add-user-small-td">
+                        <td class="add-user-td">
                                 <input class="add-user-small-input2" type="text" placeholder="phone"/>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="add-user-td">
+                            <input class="add-user-small-input1" type="password" placeholder="password"/>
+                        </td>
+                        <td class="add-user-td">
+                                <input class="add-user-small-input2" type="password" placeholder="re-password"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="add-user-last-td">
+                            <div class="add-user-radio-container">
+                                <img src="images/checked.png" class="add-user-radio-img">
+                            </div>
+                            <div class="add-user-agree-container">
+                                I agree with the <span>Terms and Conditions</span>
+                            </div>
+                            <input class="register-btn" type="submit" value="register" />
+                        </td>
+                    </tr>
                 </table>
+                <div class="add-user-error-container">password does not match</div>
             </div>
         </div>
     </body>
