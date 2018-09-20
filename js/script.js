@@ -61,6 +61,10 @@ $(document).ready(function(){
     //    end slider------------------------------------------
     
     
-    
+    $('#add-user-error-close').click(function(){
+        // $('#add-user-error-container').addClass('add-user-error-container_hide');
+        // $('#add-user-error-container').removeClass('add-user-error-container');
+        $('#add-user-error-container').fadeOut(700);
+    })
     
 });
