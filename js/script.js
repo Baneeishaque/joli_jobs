@@ -68,12 +68,49 @@ $(document).ready(function () {
     });
 
 
-    $('#add-user-password-2').focusout(function() {
+    $('#add-user-password-2').focusout(function () {
         var password1 = $('#add-user-password-1').val();
         var password2 = $('#add-user-password-2').val();
-        if (password1 != password2) {
+        if (password2 == '') {
+            $('#add-user-error-text').html('no password entered');
+            $('#add-user-error-container').fadeIn(700);
+        } else if (password1 != password2) {
+            // $('#add-user-error-container').val = ('password did not match');
+            $('#add-user-error-text').html('password did not match');
             $('#add-user-error-container').fadeIn(700);
         }
     });
 
+    $('#top-login-btn').click(function () {
+        $('html, body').animate({
+            scrollTop: $("#signup-container-main").offset().top
+        }, 1000);
+    });
+
+    $('#top-register-btn').click(function () {
+        $('html, body').animate({
+            scrollTop: $("#add-user-container-main").offset().top
+        }, 1000);
+    });
+
+    $('#add-user-radio-container').click(function () {
+        $('#add-user-radio-container').toggleClass('add-user-radio-container_active');
+    })
+
+    $('#i-agree-with').click(function () {
+        $('#add-user-radio-container').toggleClass('add-user-radio-container_active');
+    })
+
+    $('#add-user-reg-btn').click(function () {
+        var password1 = $('#add-user-password-1').val();
+        var password2 = $('#add-user-password-2').val();
+        if (password2 == '') {
+            $('#add-user-error-text').html('no password entered');
+            $('#add-user-error-container').fadeIn(700);
+        } else if (password1 != password2) {
+            // $('#add-user-error-container').val = ('password did not match');
+            $('#add-user-error-text').html('password did not match');
+            $('#add-user-error-container').fadeIn(700);
+        }
+    })
 });

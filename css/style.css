@@ -37,9 +37,6 @@ body {
     height: 60px;
     width: 100%;
     background-color: #FFFFFF;
-    /* background: #0065FF; */
-    /* background: #24B361; */
-    /* background: #A607DA; */
     /* box-shadow: 1px 1px 9px 1px #CCCCCC; */
     position: relative;
 }
@@ -55,6 +52,74 @@ body {
     font-weight: 700;
     color: #444444;
     cursor: default;
+}
+
+.top-nav-right-container {
+    height: 60px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    /* border: 1px solid #CCC; */
+}
+
+.top-login-btn {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 15px;
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+    text-align: center;
+    background-color: #FFFFFF;
+    /* background-color: #FFAB00; */
+    color: #777777;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 90%;
+    border: 1px solid #238EE0;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.top-login-btn:nth-child(2) {
+    margin-right: 25px;
+}
+
+.top-login-btn:hover {
+    transition: 1s;
+    background-color: #FDFDFD;
+    /* background-color: #FFB112; */
+    box-shadow: 0px 0px 5px 1px #BBBBBB;
+}
+
+.top-register-btn {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 15px;
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+    text-align: center;
+    background-color: #0065FF;
+    /* background-color: #DE350B; */
+    color: #FFFFFF;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 90%;
+    border: 0px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.top-register-btn:hover {
+    transition: 1s;
+    background-color: #0065FF;
+    /* background-color: #E5431C; */
+    box-shadow: 0px 0px 5px 1px #BBBBBB;
 }
 
 .welcome-container {
@@ -472,6 +537,20 @@ body {
 }
 
 .add-user-radio-container {
+    transition: 600ms;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    border: 1px solid #DDDDDD;
+    outline: none;
+    border-radius: 50%;
+    /*    box-shadow: 0px 0px 1px 0px #EFEFEF;*/
+    background-color: #FFFFFF;
+    padding: 0px;
+}
+
+.add-user-radio-container_active {
+    transition: 600ms;
     height: 15px;
     width: 15px;
     margin-right: 5px;
@@ -505,7 +584,7 @@ body {
     display: inline-block;
 }
 
-.add-user-agree-container span {
+.add-user-agree-container .terms-and-conditions {
     /*    font-weight: bold;*/
     font-family: 'Poppins';
     font-weight: 400;
