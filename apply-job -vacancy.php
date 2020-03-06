@@ -1,10 +1,10 @@
 <?php
-include_once('conn.php');
+$a=mysqli_connect("localhost","root","","joli_jobs");
 $applyId = $_GET["applyId"];
 
-$sql = "SELECT * FROM vacancy WHERE id='$applyId'";
+$sql = "SELECT FROM vacancy WHERE id='$applyId'";
 
-$b= mysqli_query($conn,$sql);
+$b= mysqli_query($a,$sql);
 
 
 $fetch=mysqli_fetch_array($b);
@@ -29,8 +29,8 @@ if(isset($_POST['submit']))
   $telephone=$_POST['telephone'];
 
   $sqla="insert into apply_vacancy(name,email,mobile,qualification,job,district,resume,address,age,post,pincode,comment,telephone)value('$name','$email','$mobile','$qualification','$job', '$district' ,'$resume','$address','$age','$post','$pincode','$comment','$telephone')";
-  mysqli_query($conn,$sqla);
-  echo mysqli_error($conn);
+  mysqli_query($a,$sqla);
+  echo mysqli_error($a);
 }
 ?>
 

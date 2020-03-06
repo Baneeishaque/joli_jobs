@@ -27,12 +27,7 @@ if(isset($_GET["deleteId"])){
             echo "Error deleting record: " . mysqli_error($conn);
         }
     }
-    
-    
 }
-
-
-
 ?>
 
 <html>
