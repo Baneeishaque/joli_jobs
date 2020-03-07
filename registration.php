@@ -1,6 +1,6 @@
 <?php
+include_once('conn.php');
 
-$a=mysqli_connect("localhost","root","","joli_jobs");
 if(isset($_POST['submit']))
 {
   $about_me=$_POST['about_me'];
@@ -37,8 +37,8 @@ if(isset($_POST['submit']))
   
   
    $sql="insert into registration(about_me,email,password,sponsor_type,sponsor_name,gender,present_address,permanent_address,educational_qualification,name,name_father,dob,age,marriage,religion,telephone,mobile,resume,technical_qualification,eng_strength,hin_strength,mal_strength,eng_post_applied,hin_post_applied,mal_post_applied,eng_experience,hin_experience,mal_experience,eng_salary,hin_salary,mal_salary)value('$about_me','$email','$password','$sponsor_type','$sponsor_name','$gender','$present_address','$permanent_address','$educational_qualification','$name','$name_father','$dob','$age','$marriage','$religion','$telephone','$mobile','$resume','$technical_qualification','$eng_strength','$hin_strength','$mal_strength','$eng_post_applied','$hin_post_applied','$mal_post_applied','$eng_experience','$hin_experience','$mal_experience','$eng_salary','$hin_salary','$mal_salary')";
-  mysqli_query($a,$sql);
-  echo mysqli_error($a);
+  mysqli_query($conn,$sql);
+  echo mysqli_error($conn);
 }
 ?>
 
