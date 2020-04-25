@@ -16,16 +16,16 @@ require_once('config.php');
     </style>
   </head>
   <body>
-    <form action="charge.php" method="POST">
+    <form action="success.php" method="POST">
     <!-- Note that the amount is in paise = 50 INR -->
     <script
-        src="https://checkout.razorpay.com/v1/checkout.js"
+         src="https://checkout.razorpay.com/v1/checkout.js"
         data-key="<?php echo $razor_api_key; ?>"
-        data-amount="200000"
-        
+        data-amount="20000"
+        data-buttontext="Pay with Razorpay"
         data-name="Joli Jobs.com"
         data-description="Registration with RazorPay"
-        data-image="https://your-awesome-site.com/your_logo.jpg"
+        data-image="img/Logo for R.png"
         data-prefill.name="Joli Jobs.com"
         data-prefill.email="support@razorpay.com"
         data-theme.color="#0d6496"
@@ -34,3 +34,6 @@ require_once('config.php');
     </form>
   </body>
 </html>
+
+
+

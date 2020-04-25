@@ -1,46 +1,4 @@
-<?php
-include_once('conn.php');
 
-if(isset($_POST['submit']))
-{
-  $about_me=$_POST['about_me'];
-  $email=$_POST['email'];
-  $password=$_POST['password'];
-  $sponsor_type=$_POST['sponsor_type'];
-  $sponsor_name=$_POST['sponsor_name'];
-  $gender=$_POST['gender'];
-  $present_address=$_POST['present_address'];
-  $permanent_address=$_POST['permanent_address'];
-  $educational_qualification=$_POST['educational_qualification'];
-  $name=$_POST['name'];
-  $name_father=$_POST['name_father'];
-  $dob=$_POST['dob'];
-  $age=$_POST['age'];
-  $marriage=$_POST['marriage'];
-  $religion=$_POST['religion'];
-  $telephone=$_POST['telephone'];
-  $mobile=$_POST['mobile'];
-  $resume=$_POST['resume'];
-  $technical_qualification=$_POST['technical_qualification'];
-  $eng_strength=$_POST['eng_strength'];
-  $hin_strength=$_POST['hin_strength'];
-  $mal_strength=$_POST['mal_strength'];
-  $eng_post_applied=$_POST['eng_post_applied'];
-  $hin_post_applied=$_POST['hin_post_applied'];
-  $mal_post_applied=$_POST['mal_post_applied'];
-  $eng_experience=$_POST['eng_experience'];
-  $hin_experience=$_POST['hin_experience'];
-  $mal_experience=$_POST['mal_experience'];
-  $eng_salary=$_POST['eng_salary'];
-  $hin_salary=$_POST['hin_salary'];
-  $mal_salary=$_POST['mal_salary'];
-  
-  
-   $sql="insert into registration(about_me,email,password,sponsor_type,sponsor_name,gender,present_address,permanent_address,educational_qualification,name,name_father,dob,age,marriage,religion,telephone,mobile,resume,technical_qualification,eng_strength,hin_strength,mal_strength,eng_post_applied,hin_post_applied,mal_post_applied,eng_experience,hin_experience,mal_experience,eng_salary,hin_salary,mal_salary)value('$about_me','$email','$password','$sponsor_type','$sponsor_name','$gender','$present_address','$permanent_address','$educational_qualification','$name','$name_father','$dob','$age','$marriage','$religion','$telephone','$mobile','$resume','$technical_qualification','$eng_strength','$hin_strength','$mal_strength','$eng_post_applied','$hin_post_applied','$mal_post_applied','$eng_experience','$hin_experience','$mal_experience','$eng_salary','$hin_salary','$mal_salary')";
-  mysqli_query($conn,$sql);
-  echo mysqli_error($conn);
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,59 +38,6 @@ if(isset($_POST['submit']))
 <!-- Body -->
 
 <body>
-
-  <!-- <div class="desclimer_section" id="registration_desclaimer_container">
-    <div class="inner_container">
-      <div id="" class="desclimer_textarea">
-
-        <h3>Declaration and Acknowledgement</h3>
-
-        <h5>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registration with JOLi-JOBS.com means that
-          your candidature details have been added to our Database. If there will be any matched vacancy as per your
-          profile, then HR of JOLi-JOBS.com or it’s job centres may send you information of HR name and number with job
-          Code. You can Call the HR on provided number and can ask her to apply for mentioned job Code and can update
-          information any time during the year or can update information at any job center.Registration with
-          JOLi-JOBS.com doesn’t mean that you will be guaranteed placed somewhere or we are assuring you about job
-          placement. Registration fees is just a facilitation charges to keep your details in our database and to
-          intimate you about any suitable vacancy. Registration fees is 250 - up to 500,in special offer or sensational
-          period it may lesser than this. A).registration fee is 250 for 3 months validity with 3 interview B).300 is
-          for 5 months and 5 interviews. C)reg. fee 500 for 1 year validity unlimited interviews can attend. The
-          registration fee will be return back to you in case you are not placed anywhere within the validity period. We
-          are just a mediator between you and company/ firm which job provides to you. If any disputes between you and
-          them we have no responsibility on it. JOLi-JOBS.com and it’s job centre do not take any guarantee of your
-          placement or selection against any vacancy as selection is totally depends upon the skills of jobseekers and
-          this is sole right of HR of JOLi-JOBS.com or HR of its client to select or reject any candidate. After getting
-          placement you have to pay a service charge of 35-50% of the first month salary and advance pay
-          of1000-3000(depends up on salary package) getting appionment letter. If any of our job centre or HR assure you
-          that they will place you or take it’s guarantee, please intimate the company for same and consider that
-          statement as false & JOLi-JOBS.com do no support such false commitment as selection or joining is not in the
-          hand of any job centre or in the hand of any HR. It’s totally depending upon the skills of job seekers and the
-          requirement of HR of our client. We can’t force him to select or reject any particular person. JOLi-JOBS.com
-          will take appropriate action against people who found involve in such false commitment. If you don’t accept
-          any or all above Terms and Conditions, then you can withdraw your registration with JOLi-JOBS.com. Within 7
-          days from the date of receipt of this email. If the registration is not cancelled or withdrawal within 7 days
-          from the date of receipt of this mail then it’ll be considered that you accept and understand all above Terms
-          & Conditions. You give authority to JOLi-JOBS.com to intimate you about jobs via SMS time to time during the
-          period of registration. You give authority to JOLi-JOBS.com to send you SMS for any available offer, matching
-          to your interest other then any jobs. In case of disputes arising out of disagreements in the terms stated in
-          this agreement, the courts of Ernakulum district will have complete jurisdiction.
-        </h5>
-
-
-      </div>
-
-      <div class="desclimer_button_area">
-        <div class="left">
-          <input type="checkbox" id="desclimer_agreement_checkbox" name="desclimer_checkbox" value="true">
-          <label for="desclimer_agreement_checkbox">I agree to the Terms and Conditions</label>
-        </div>
-
-        <button class="desclimer_accept_button" id="desclimer_agreement_button" disabled>register</button>
-
-      </div>
-    </div>
-  </div> -->
 
   <!-- Pre Loader -->
   <div class="loading">
@@ -211,159 +116,60 @@ if(isset($_POST['submit']))
           </div>
         </div>
         <!-- Submit Application-->
-        <form class="konnect-form" method="post" id="regForm" name="regForm">
+        <form class="konnect-form" action="pushdata.php" method="post" id="regForm" name="regForm" enctype="multipart/form-data">
           <div class="row">
             <div class="col-md-6">
-              <textarea class="form-control" id="comment" placeholder="About me" name="about_me" required></textarea>
+              <input type="text"  class="form-control" id="comment" placeholder="Name" name="name" required>
 
               <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your E-Mail" required>
               <div class="row">
             <div class="col-md-6">
-                <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password" required minlength="5"/>
                 </div>
             <div class="col-md-6">
-                <input type="password" class="form-control" id="confirmpassword" placeholder="Conform password" onfocusout="return Validate()" required>
+                <input type="password" class="form-control" id="confirmpassword" placeholder="Conform password" onfocusout="return Validate()" required minlength="5" />
                 </div>
             </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <select class="form-control" id="sel1" name="sponsor_type" required>
-                    <option value="father">Father</option>
-                    <option value="mother">Mother</option>
-                    <option value="spouse">Spouse</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="phone" placeholder="Name of...." required
-                    name="sponsor_name">
-                </div>
-              </div>
-              <label class="radio-inline"><input type="radio" name="gender" value="male" checked>Male</label>
-              <label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
-              <label class="radio-inline"><input type="radio" name="gender" value="other">Male</label><br>
-              <textarea class="form-control" id="comment" name="present_address" placeholder="Present Address.."
+              
+              <label class="radio-inline"><input type="radio" name="gender" value="m" checked>Male</label>
+              <label class="radio-inline"><input type="radio" name="gender" value="f">Female</label>
+              <label class="radio-inline"><input type="radio" name="gender" value="o">Other</label><br><br>
+              <textarea class="form-control" id="comment" name="address" placeholder="Address.."
                 required></textarea>
-              <textarea class="form-control" id="comment" name="permanent_address" placeholder="Permenant Address..."
-                required></textarea>
-              <textarea class="form-control" id="comment" name="educational_qualification"
-                placeholder="Educational Qualifiaction..." required></textarea>
+             
+              
             </div>
             <div class="col-md-6">
-              <input type="text" class="form-control" name="name" id="name" placeholder="Name of Applicant" required>
-              <input type="text" class="form-control" name="name_father" id="phone" placeholder="Name of father"
-                required>
+              
+              
               <input type="text" class="form-control" name="dob" id="name" placeholder="Date of birth" required>
               <input type="text" class="form-control" name="age" id="name" placeholder="Age" required>
-              <div class="row">
-                <div class="col-md-6">
-                  <select class="form-control" id="sel1" name="marriage" required>
-                    <option value="0">Maritial Status</option>
-                    <option value="s">Single</option>
-                    <option value="m">Married</option>
-                    <option value="d">Divorced</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-control" id="sel1" name="religion">
-                    <option value="0">Religion</option>
-                    <option value="h">Hindu</option>
-                    <option value="m">Muslim</option>
-                    <option value="c">Christian</option>
-                    <option value="o">Other</option>
-                  </select>
-                </div>
-              </div>
-              <input type="text" class="form-control" id="name" placeholder="Telephone" name="telephone" required>
+              
+              
               <input type="text" class="form-control" id="name" placeholder="Mobile" name="mobile" required>
               <span class="btn btn-file"> Browse Your Resume
-                <input type="file" name="resume" required>
+                <input type="file" name="resume">
               </span>
               <br>
               <br>
-              <textarea class="form-control" id="comment" placeholder="Techical Qualification..."
-                name="technical_qualification" required></textarea>
+              <textarea class="form-control" id="comment" name="educational_qualification"
+                placeholder="Educational Qualifiaction..." required></textarea>
             </div>
 
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="col-md-4">
-
-                <p style="margin: 20px 0 16px;margin-bottom: 17px;"> English</p>
-                <label class="radio-inline"><input name="eng_strength" type="radio" value="1" checked>Good</label>
-                <label class="radio-inline"><input name="eng_strength" type="radio" value="2">Fair</label>
-                <label class="radio-inline"><input name="eng_strength" type="radio" value="3">Poor</label>
-              </div>
-              <div class="col-md-4">
-                <p style="margin: 20px 0 16px;margin-bottom: 17px;"> Hindi</p>
-                <label class="radio-inline"><input name="hin_strength" type="radio" value="1" checked>Good</label>
-                <label class="radio-inline"><input name="hin_strength" type="radio" value="2">Fair</label>
-                <label class="radio-inline"><input name="hin_strength" type="radio" value="3">Poor</label>
-
-              </div>
-              <div class="col-md-4">
-                <p style="margin: 20px 0 16px;margin-bottom: 17px;"> Malayalam</p>
-                <label class="radio-inline"><input name="mal_strength" type="radio" value="1" checked>Good</label>
-                <label class="radio-inline"><input name="mal_strength" type="radio" value="2">Fair</label>
-                <label class="radio-inline"><input name="mal_strength" type="radio" value="3">Poor</label>
-
-              </div>
-
-            </div>
 
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div class="col-md-4">
-
-
-              </div>
-              <div class="col-md-4">
-
-              </div>
-
-            </div>
-
+            <div class="col-md-6">
+              <input type="text"  class="form-control" id="comment" placeholder="Payment" name="payment" required>
           </div>
-          <br>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="col-md-4">
+      </div>
 
-                <input type="text" class="form-control" id="name" name="eng_post_applied"
-                  placeholder="Post Applied for..." required>
-                <input type="text" class="form-control" id="name" name="eng_experience" placeholder="Experience..."
-                  required>
-                <input type="text" class="form-control" id="name" name="eng_salary" placeholder="Expected Salary.."
-                  required>
-              </div>
-              <div class="col-md-4">
-                <input type="text" class="form-control" id="name" name="hin_post_applied"
-                  placeholder="Post Applied for..." required>
-                <input type="text" class="form-control" id="name" name="hin_experience" placeholder="Experience..."
-                  required>
-                <input type="text" class="form-control" id="name" name="hin_salary" placeholder="Expected Salary.."
-                  required>
-
-              </div>
-              <div class="col-md-4">
-                <input type="text" class="form-control" id="name" name="mal_post_applied"
-                  placeholder="Post Applied for..." required>
-                <input type="text" class="form-control" id="name" name="mal_experience" placeholder="Experience..."
-                  required>
-                <input type="text" class="form-control" id="name" name="mal_salary" placeholder="Expected Salary.."
-                  required>
-
-              </div>
-
-            </div>
+          
 
 
           </div>
           <div class="checkbox">
-          <label><input type="checkbox" id="apply_job_desclaimer_checkbox" required> Accept<a href="Termsandconditions.html" target="blank">Terms and conditions</a> </label>
+          <label><input name="condition_accept" type="checkbox" id="apply_job_desclaimer_checkbox" required> Accept<a href="Termsandconditions.html" target="blank">Terms and conditions</a> </label>
         </div>
 
 

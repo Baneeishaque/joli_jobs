@@ -1,3 +1,0 @@
-<?php
-    $abu = "thahir";
-?>

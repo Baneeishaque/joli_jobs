@@ -1,0 +1,25 @@
+admin
+	index:
+		[]	users
+				list
+				delete
+		[]	applications
+				list
+				delete
+		[]	vacancy
+				list
+				delete
+
+applications:
+	id
+	job_title
+	job_role
+	employer_name
+	job_description
+	contact_number
+	date_post
+	whatsapp_number
+	category
+
+
+
