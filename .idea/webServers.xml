@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c28800c3-2f21-4c9f-9a83-0d6f7eb8612e" name="joli-jobs.com" url="http://joli-jobs.com">
+        <fileTransfer rootFolder="/public_html" host="173.249.2.31" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ad9134cb-ed14-4eff-bb31-2bd48de8153b" name="jolijobs.ssquared.qa" url="https://jolijobs.ssquared.qa">
+        <fileTransfer rootFolder="/public_html/joli-jobs.com" host="149.255.58.44" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
