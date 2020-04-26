@@ -33,91 +33,9 @@ if(isset($_POST['job_title'])) {
 
 $categories = $conn->query("SELECT * FROM `categories`");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
-    <title>Add Vacancy</title>
-    <!-- Favocon -->
-    <link href="img/fav.png" rel="shortcut icon" type="image/x-icon" />
-    <!-- Bootstrap Core CSS -->
-  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom icon Fonts -->
-  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Animated CSS -->
-  <link href="css/animate.css" media="all" rel="stylesheet" type="text/css" />
-
-  <!-- Main CSS -->
-
-  <link href="css/default.css" rel="stylesheet">
-
-</head>
-<body>
-      <!-- Pre Loader -->
-  
-
-  <!-- Top Bar  -->
-  <div class="konnect-info">
-    <div class="container">
-      <div class="row">
-        <!-- Top bar Left -->
-        <div class="col-md-6 col-sm-8 hidden-xs">
-          <ul>
-            <li><i class="fa fa-paper-plane" aria-hidden="true"></i> jolijobs4you@gmail.com </li>
-            <li class="li-last"> <i class="fa fa-volume-control-phone" aria-hidden="true"></i>9544773656</li>
-          </ul>
-        </div>
-        <!-- Top bar Right -->
-        <div class="col-md-6 col-sm-4">
-          <ul class="konnect-float-right">
-            <li class="li-last"> <a target="_blank"
-                href="https://www.facebook.com/JOLi-JOBS-com-100954461307994/?ref=aymt_homepage_panel&eid=ARDg7qU2YctwZSg0KTN1TxMA43oX304wIxWBv5R0tqFjVbDIySUr9QV7pQAOnM_rTsctoa0r9fH5UkfZ"
-                target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="https://www.instagram.com/jolijobs.c/"> <i
-                  class="fa fa-instagram"></i> </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Navigation + LOGO Area -->
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- Responsive Menu -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <i
-            class="fa fa-bars" aria-hidden="true"></i> </button>
-        <!-- Logo -->
-        <a class="navbar-brand page-scroll logo-color" href="index.html"><img src="img/logo.png" alt="logo"
-            width="162"></a> </div>
-
-      <!-- Menu Items -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li> <a href="index.html">Home</a> </li>
-          <li> <a href="about-us.html">About Us</a> </li>
-          <li> <a href="registration.php">Registration</a> </li>
-          <li> <a href="add_vacancy.php">Post Your Vacancy</a> </li>
-          <li><a href="list_vacancy.php">Vacancies</a></li>
-
-
-
-          <li><a href="contact.html">Contact Us</a></li>
-
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
+<?php
+  include_once('header.php');
+?>
     <!-- Banner -->
   <header class="innner-page">
     <div class="container">
@@ -289,6 +207,36 @@ $categories = $conn->query("SELECT * FROM `categories`");
     </div>
   </div>
 </footer>
-<a target="_blank" style="position:fixed; bottom: 10px; right:10px;z-index:999" href="#" rel="nofollow"></a>
-</body>
+<a target="_blank" style="position:fixed; bottom: 10px; right:10px;z-index:999" href="http://www.konnectplugins.com/template/recruit-plus-staffing-and-recruiting-wordpress-theme/" rel="nofollow"></a>
+<!-- jQuery --> 
+
+<script src="assets/jquery/jquery.min.js"></script> 
+
+<!-- Bootstrap Core JavaScript --> 
+<script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- Theme JavaScript --> 
+<script src="js/default.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77800499-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+
+  <!--======= Bootstrap =========-->
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+
+  <!--======= Touch Swipe =========-->
+  <script src="js/jquery.touchSwipe.min.js"></script>
+
+  <!--======= Customize =========-->
+  <script src="js/responsive_bootstrap_carousel.js"></script>
+
+    </body>
 </html>

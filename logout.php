@@ -6,7 +6,7 @@
         unset($_SESSION["user_in"]);
         session_unset('user_in');
         session_destroy();
-        header("Location: index.html");
+        header("Location: index.php");
     }
 
 ?>
