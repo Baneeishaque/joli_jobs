@@ -137,10 +137,6 @@ $pay = $pay * 100;
 
 <div id='card' class="animated fadeIn">
     <div id='upper-side'>
-<!--        --><?// xml version = "1.0" encoding = "utf-8"?>
-        <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!--        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">-->
-
         <h1 id='status'>
             Make a Payment
         </h1>
