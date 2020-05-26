@@ -256,12 +256,12 @@ if ($result->num_rows > 0) {
                 </div>
             </table>
             <script type="text/javascript">
-	$(document).ready(function() {
-		$(".popup_button").click(function() {
-			$("#modal_delete").attr("href", $(this).attr("direct"));
-			$("#id01").fadeIn(500);
-		})
-	})
+                $(document).ready(function () {
+                    $(".popup_button").click(function () {
+                        $("#modal_delete").attr("href", $(this).attr("direct"));
+                        $("#id01").fadeIn(500);
+                    })
+                })
 
 
             </script>

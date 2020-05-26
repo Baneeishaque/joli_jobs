@@ -9,5 +9,5 @@ $(document).ready(function () {
             $("#apply_job_submit_button").attr('disabled', true);
         }
     });
-    
+
 });

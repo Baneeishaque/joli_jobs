@@ -19,7 +19,6 @@ $(document).ready(function () {
     }
 
 
-
     $("#desclimer_agreement_checkbox").change(function () {
         if ($(this).is(":checked")) {
             $("#desclimer_agreement_button").attr('disabled', false);
@@ -29,34 +28,9 @@ $(document).ready(function () {
     });
 
 
-
     $("#registration_dummy_submit_button").click(function () {
         validateForm();
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
 
 
 });

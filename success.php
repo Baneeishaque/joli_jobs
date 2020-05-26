@@ -131,7 +131,7 @@ if (isset($_POST['razorpay_payment_id'])) {
 <div id='card' class="animated fadeIn">
     <div id='upper-side'>
         <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg version="1.1" id="checkmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg version="1.1" id="checkmark" xmlns="http://www.w3.org/2000/svg"
              x="0px" y="0px" xml:space="preserve">
         <path d="M131.583,92.152l-0.026-0.041c-0.713-1.118-2.197-1.447-3.316-0.734l-31.782,20.257l-4.74-12.65
 	c-0.483-1.29-1.882-1.958-3.124-1.493l-0.045,0.017c-1.242,0.465-1.857,1.888-1.374,3.178l5.763,15.382
