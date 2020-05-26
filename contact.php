@@ -27,8 +27,8 @@ include_once('header.php');
             <div class="col-sm-6 small-map">
                 <div id="map"></div>
                 <div id="cont" style="display:none"><img src='img/logo.png' width='120' alt="logo">
-                    <p style='color:#0A84CB;font-size:16px;'>Koramangala, Banglore<br>
-                        Karnataka, INDIA</p>
+                    <p style='color:#0A84CB;font-size:16px;'>Panampilly Nagar<br>
+                        Ernakulam, Kerala, INDIA</p>
                 </div>
             </div>
         </div>
@@ -119,7 +119,7 @@ include_once('header.php');
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
-            center: {lat: 12.9346661, lng: 77.6229708},
+            center: {lat: 9.96556632, lng: 76.294326},
             scrollwheel: false,
             getMap: true
         });
