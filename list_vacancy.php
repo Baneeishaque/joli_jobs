@@ -209,15 +209,21 @@ list-style-type: none;
             $result = $conn->query("SELECT * FROM vacancies ".$cat_query." ORDER BY `id` DESC LIMIT ".$page.",".($page+10));
 			echo '<h2 style="text-align: center;">VACANCIES</h2>';
 			if($result->num_rows > 0) {
-		?>    
+		?>
     </center>
-		<table class="users-table">
-			<tr class="header"> <td>no.</td><td>employer</td><td>job</td><td>phone</td><td>date</td><td>action</td></tr>
-		<?php
+    <table class="users-table">
+        <tr class="header">
+            <td>no.</td>
+            <td>employer</td>
+            <td>job</td>
+            <td>place</td>
+            <td>action</td>
+        </tr>
+        <?php
 				$counter = 1;
-				while($row = $result->fetch_assoc()){
-					echo "<tr><td>" . $counter++ . "</td><td>" . $row['employer_name'] . "</td><td>" . $row['job_role'] . "</td><td>" . $row['contact_number'] . '</td><td>' . $row['date_post'] . '</td><td><a href="apply.php?vacancy_id=' . $row['id'] . '">Apply</a></td></tr>';
-				}
+				while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>" . $counter++ . "</td><td>" . $row['employer_name'] . "</td><td>" . $row['job_role'] . "</td><td>" . $row['place'] . '</td><td><a href="apply.php?vacancy_id=' . $row['id'] . '">Apply</a></td></tr>';
+                }
 			}	else {
 				echo "no vacancies to list";
 			}

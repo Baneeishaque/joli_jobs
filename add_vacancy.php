@@ -9,6 +9,7 @@ if(isset($_POST['job_title'])) {
     $employer = $_POST['employer'];
     $job_description = $_POST['job_description'];
     $number = $_POST['number'];
+    $place = $_POST['job_place'];
     $date = date('Y-m-d');
     $wa_number = ($_POST['wa_number']?$_POST['wa_number']:'');
     // $category = ($_POST['category']?$_POST['category']:'');
@@ -19,8 +20,8 @@ if(isset($_POST['job_title'])) {
     }
 
     $sql = "
-    INSERT INTO `vacancies` (`id`, `job_title`, `job_role`, `employer_name`, `job_description`, `contact_number`, `date_post`, `whatsapp_number`, `category`) 
-    VALUES (NULL, '".$job_title."', '".$job_role."', '".$employer."', '".$job_description."', '".$number."', '".$date."', '".$wa_number."', '".$category."');
+    INSERT INTO `vacancies` (`id`, `job_title`, `job_role`, `employer_name`, `job_description`, `contact_number`, `date_post`, `whatsapp_number`, `category`, `place`) 
+    VALUES (NULL, '" . $job_title . "', '" . $job_role . "', '" . $employer . "', '" . $job_description . "', '" . $number . "', '" . $date . "', '" . $wa_number . "', '" . $category . "', '" . $place . "');
     ";
     if($conn->query($sql) === TRUE){
         $message = "vacancy added successfully";
@@ -62,55 +63,63 @@ $categories = $conn->query("SELECT * FROM `categories`");
     ?>
 
         <form class="konnect-form" id="contactForm" method="POST" action="">
-         <div class="row">
-                    <div class="col-md-4">
-             <input type="text" class="form-control" id="phone" name="job_title" placeholder="Job Tittle" required="required style="margin-top: 6%;">
-        </div>
-        <div class="col-md-4">
-             <input type="text" class="form-control" id="phone" name="job_role" placeholder="Job Role" required="required style="margin-top: 6%;">
-        </div>
-    </div>
-    <div class="row">
-                    <div class="col-md-4">
-             <input type="text" class="form-control" id="phone" name="employer" placeholder="Employer Name" required="required style="margin-top: 6%;">
-        </div>
-        <div class="col-md-4">
-             <input type="text" class="form-control" id="phone" name="job_description" placeholder="Job description" required="required style="margin-top: 6%;">
-        </div>
-    </div>
-    <div class="row">
-                    <div class="col-md-4">
-             <input type="text" class="form-control" id="phone" name="number" placeholder="Contact Number" required="required style="margin-top: 6%;">
-        </div>
-        <div class="col-md-4">
-             <input type="text" class="form-control" id="phone" name="wa_number" placeholder="Whatsapp Number" required="required style="margin-top: 6%;">
-        </div>
-    </div>
-    
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="phone" name="job_title" placeholder="Job Tittle"
+                           required="required" style="margin-top: 6%;">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="phone" name="job_role" placeholder="Job Role"
+                           required="required" style="margin-top: 6%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="phone" name="employer" placeholder="Employer Name"
+                           required="required" style="margin-top: 6%;">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="phone" name="job_description"
+                           placeholder="Job description" required="required" style="margin-top: 6%;">
+                    <input type="text" class="form-control" id="place" name="job_place" placeholder="Place"
+                           required="required" style="margin-top: 6%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="phone" name="number" placeholder="Contact Number"
+                           required="required" style="margin-top: 6%;">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="phone" name="wa_number" placeholder="Whatsapp Number"
+                           required="required" style="margin-top: 6%;">
+                </div>
+            </div>
 
-       <!-- <label for="">job title</label>
-        <input type="text" name="job_title" required="required">
-        <br/><br/><br/>   
 
-        <label for="">job role</label>
-        <input type="text" name="job_role" required="required">
-        <br/><br/><br/>
+            <!-- <label for="">job title</label>
+             <input type="text" name="job_title" required="required">
+             <br/><br/><br/>
 
-        <label for="">employer name</label>
-        <input type="text" name="employer" required="required">
-        <br/><br/><br/>
+             <label for="">job role</label>
+             <input type="text" name="job_role" required="required">
+             <br/><br/><br/>
 
-        <label for="">job description</label>
-        <input type="text" name="job_description" required="required">
-        <br/><br/><br/> 
+             <label for="">employer name</label>
+             <input type="text" name="employer" required="required">
+             <br/><br/><br/>
 
-        <label for="">contact number</label>
-        <input type="text" name="number" required="required">
-        <br/><br/><br/>
+             <label for="">job description</label>
+             <input type="text" name="job_description" required="required">
+             <br/><br/><br/>
 
-        <label for="">whatsapp number</label>
-        <input type="text" name="wa_number">
-        <br/><br/><br/>-->
+             <label for="">contact number</label>
+             <input type="text" name="number" required="required">
+             <br/><br/><br/>
+
+             <label for="">whatsapp number</label>
+             <input type="text" name="wa_number">
+             <br/><br/><br/>-->
 
         <label for="">category</label>
         <div class="row">
